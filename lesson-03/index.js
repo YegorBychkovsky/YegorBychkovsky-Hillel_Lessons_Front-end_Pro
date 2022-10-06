@@ -1,6 +1,5 @@
 //ДЗ №3
 
-
 // var firstNumber = Number(prompt('Введите число', '' ));
 // var secondNumber = Number(prompt('Введите число', '' ));
 
@@ -12,13 +11,16 @@
 //  ${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
 
 
-// ДЗ №4
 
+
+
+// ДЗ №4
 
 // var operation = prompt('Какую мат. операцию хотите совершить (add, sub, mult, div)?', '')
 // var firstNumber = Number(prompt('Введите число', '' ));
 // var secondNumber = Number(prompt('Введите число', '' ));
  
+
 // if (operation === 'add') {
 //     alert(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`);
 
@@ -33,14 +35,17 @@
 
 // } else if (operation === null) {
 //     alert( 'Отменено' );
+
 // } else {
 //     alert(`operation incorect`);
 // }
 
 
 
-// ДЗ №5
 
+
+
+// ДЗ №5
 
 // var hour = Number(prompt('Введите кол-во часов', '' ));
 
@@ -50,11 +55,13 @@
 
 
 
+
+
+
 // ДЗ №6
 
+// var firstNumber = Number(prompt('Введите число', '' ));
+// var secondNumber = Number(prompt('Введите число', '' ));
+// var thirdNumber = Number(prompt('Введите число', '' ));
 
-var firstNumber = Number(prompt('Введите число', '' ));
-var secondNumber = Number(prompt('Введите число', '' ));
-var thirdNumber = Number(prompt('Введите число', '' ));
-
-alert(`Среднее врефметические число = ${(firstNumber + secondNumber + thirdNumber) / 3}`)
+// alert(`Среднее врефметические число = ${(firstNumber + secondNumber + thirdNumber) / 3}`)
