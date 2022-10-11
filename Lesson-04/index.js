@@ -219,15 +219,15 @@
 //........................................ЗАДАНИЕ №7..............................
 
 
-let i = 0
-let sum = 0;
+// let i = 0
+// let sum = 0;
 
 
-for (let i = 30; i < 81; i = i+2) {
-    console.log((sum += i))
-}
+// for (let i = 30; i < 81; i = i+2) {
+//     console.log((sum += i))
+// }
 
-document.write(sum)
+// document.write(sum)
 
 
 
@@ -241,6 +241,29 @@ document.write(sum)
 //     console.log(i)
 // }
 
+
+//........................................ЗАДАНИЕ №9..............................
+
+
+// let number = +prompt('');
+
+// let initialNumber = number;
+// let mul = 2;
+// let i = 1;
+
+
+// while (true) {
+//     if (number % mul === 0) {
+//         console.log(i + ':' + mul)
+//         number /= mul;
+//         i++;
+//     } else {
+//         mul++;
+//     } if (mul > initialNumber) {
+//         break;
+//     }
+// }
+//
 
 //........................................ЗАДАНИЕ №12..............................
 
@@ -268,39 +291,6 @@ document.write(sum)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let number = +prompt('');
-
-// let initialNumber = number;
-// let mul = 2;
-// let i = 1;
-
-
-// while (true) {
-//     if (number % mul === 0) {
-//         console.log(i + ':' + mul)
-//         number /= mul;
-//         i++;
-//     } else {
-//         mul++;
-//     } if (mul > initialNumber) {
-//         break;
-//     }
-// }
 
 
 
