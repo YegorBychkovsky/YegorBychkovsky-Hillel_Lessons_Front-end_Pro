@@ -1,5 +1,5 @@
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-let sum = 'Результат:'
+var sum = 'Результат:'
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -12,6 +12,8 @@ function generateKey (a, b) {
         d = b[Math.ceil(getRandomInt(i, random))]
         sum += d
     }
+    return sum
 }
-generateKey(36, characters)
-console.log(sum);
+const key = generateKey(36, characters)
+
+console.log(key);
