@@ -1,19 +1,16 @@
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-var sum = 'Результат:'
-
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.ceil(Math.random() * (max - min) + min);
-  }
-function generateKey (a, b) {
-    for (i = 0; i < a; i++) {
-        let random = Math.random()*characters.length;
-        d = b[Math.ceil(getRandomInt(i, random))]
-        sum += d
-    }
-    return sum
+min = Math.ceil(min);
+max = Math.floor(max);
+return Math.floor(Math.random() * (max - min) + min);
 }
-const key = generateKey(36, characters)
-
-console.log(key);
+function generateKey (a, b) {
+let sum = 'Результат:'
+for (i = 0; i < a; i++) {
+d = b[Math.ceil(getRandomInt(0, characters.length))]
+sum += d
+}
+return sum
+}
+const key = generateKey(15, characters)
+console.log(key)
