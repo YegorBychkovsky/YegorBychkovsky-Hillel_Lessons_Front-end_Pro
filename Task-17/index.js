@@ -3,14 +3,14 @@ function count() {
     
     return function (a) {
         counter += a;
-        console.log(counter);
+        return counter
     };
 }
 
 const sum = count()
 
 
-sum(2);
-sum(6);
-sum(17);
-sum(45);
+console.log(sum(2)); 
+console.log(sum(6));
+console.log(sum(17));
+console.log(sum(45));
