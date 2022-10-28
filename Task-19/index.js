@@ -61,6 +61,10 @@ function House(name, a) {
     this.name = name;
     this.numberOfApartment = a;
 }
+function House2(name, a) {
+    this.name = name;
+    this.apartments = a;
+}
 House.prototype.dwellers = 0
 const apartment1 = new House("My House", 1);
 apartment1.dwellers = 4
@@ -83,7 +87,7 @@ function creationOfCity() {
     if (x === 'Yes') {
         const name = prompt(question2);
         const a = +prompt(question3);
-        console.warn(new House(name, a));
+        console.warn(new House2(name, a));
         creationOfCity()
     } else {
         alert("Ok!")
