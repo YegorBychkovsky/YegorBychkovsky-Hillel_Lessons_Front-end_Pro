@@ -25,7 +25,6 @@ console.warn(apartment2);
 console.warn(apartment3);
 
 creationOfCity()
-
 function creationOfCity() {
     const x = prompt(question1) 
     if (x === 'Yes') {
