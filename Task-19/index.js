@@ -16,7 +16,7 @@ class Flat {
 class House {
     flats = [];
 
-    maxFlats (number) {
+    constructor (number) {
         this.maxNumberOfFlats = number;
     }
     addFlat (name) {
@@ -47,8 +47,7 @@ const flat3 = new Flat()
 flat3.addResident(humanLucas)
 
 
-const house1 = new House()
-house1.maxFlats(4);
+const house1 = new House(4)
 house1.addFlat(flat1);
 house1.addFlat(flat2);
 house1.addFlat(flat3);
@@ -56,8 +55,7 @@ house1.addFlat(flat3);
 house1.addFlat(flat3);
 console.log(house1);
 
-const house2 = new House()
-house2.maxFlats(5);
+const house2 = new House(5)
 house2.addFlat(flat3);
 house2.addFlat(flat2);
 house2.addFlat(flat1);
@@ -66,8 +64,7 @@ house2.addFlat(flat2);
 house2.addFlat(flat2);
 console.log(house2);
 
-const house3 = new House()
-house3.maxFlats(2);
+const house3 = new House(2)
 house3.addFlat(flat1);
 house3.addFlat(flat1);
 console.log(house3);
