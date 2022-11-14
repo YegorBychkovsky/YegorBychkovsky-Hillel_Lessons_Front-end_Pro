@@ -15,10 +15,10 @@ button.style.backgroundColor = 'grey'
 button.style.marginLeft = '10px'
 
 button.addEventListener('click', (ev) => {
-    if (input.value.startsWith('https')|input.value.startsWith('http')){
+    if (input.value.startsWith('https')||input.value.startsWith('http')){
         window.open(`${input.value}`, "_self", "popup=true")
         return
     }
     input.value = `https:${input.value}`
+    window.open(`${input.value}`, "_self", "popup=true")
 });
-
