@@ -85,12 +85,6 @@ var liProducts5 = document.querySelector('[data-product-id = "5"]')
 const func = function visibling(params) {
   ulDescription.style.visibility = 'visible'
   button.style.visibility = 'visible'
-  button.addEventListener('click', () => {
-    ulProducts.style.visibility = 'hidden'
-    button.style.visibility = 'hidden'
-    ulDescription.style.visibility = 'hidden'
-    message.style.visibility = 'visible'
-  })
 }
 const func1 = function (params) {
   liProducts4.style.visibility = 'hidden'
@@ -98,63 +92,83 @@ const func1 = function (params) {
   ulProducts.style.visibility = 'visible';
 }
 
+const visible = function () {
+  liProducts1.style.visibility = 'visible'
+  liProducts2.style.visibility = 'visible'
+  liProducts3.style.visibility = 'visible'
+  liProducts4.style.visibility = 'visible'
+  liProducts5.style.visibility = 'visible'
+}
+
 const firstCategoriHandler = (ev) => {
-    liProducts1.innerText = `${products[7].name}`
-      liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[7].description}`
-        func()
-        })
-  liProducts2.innerText = `${products[10].name}`
-    liProducts2.addEventListener('click', () => {ulDescription.innerText = `${products[10].description}`
-      func()
-      })
-  liProducts3.style.visibility = 'hidden'
-  func1();
+  visible(liProducts3)
+  visible(liProducts4)
+  message.style.visibility = 'hidden'
+  liProducts1.innerText = `${products[7].name}`
+  liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[7].description}`
+  func()
+})
+liProducts2.innerText = `${products[10].name}`
+liProducts2.addEventListener('click', () => {ulDescription.innerText = `${products[10].description}`
+func()
+})
+liProducts3.style.visibility = 'hidden'
+func1();
 }
 
 const secondCategoriHandler = (a) => {
+  visible(liProducts3)
+  visible(liProducts4)
+  message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[0].name}`
-    liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[0].description}`
-      func()
-      })
-  liProducts2.innerText = `${products[2].name}`
-    liProducts2.addEventListener('click', () => {ulDescription.innerText = `${products[2].description}`
-      func()
-      })
-  liProducts3.innerText = `${products[5].name}`
+  liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[0].description}`
+  func()
+})
+liProducts2.innerText = `${products[2].name}`
+liProducts2.addEventListener('click', () => {ulDescription.innerText = `${products[2].description}`
+func()
+})
+liProducts3.innerText = `${products[5].name}`
     liProducts3.addEventListener('click', () => {ulDescription.innerText = `${products[5].description}`
       func()
       })
   liProducts4.innerText = `${products[12].name}`
-    liProducts4.addEventListener('click', () => {ulDescription.innerText = `${products[12].description}`
+  liProducts4.addEventListener('click', () => {ulDescription.innerText = `${products[12].description}`
       func()
-      })
-  liProducts5.style.visibility = 'hidden'
-  ulProducts.style.visibility = 'visible';
-}
-const thirdCategoriHandler = (ev) => {
-  liProducts1.innerText = `${products[3].name}`
+    })
+    liProducts5.style.visibility = 'hidden'
+    ulProducts.style.visibility = 'visible';
+  }
+  const thirdCategoriHandler = (ev) => {
+    visible(liProducts3)
+    visible(liProducts4)
+    message.style.visibility = 'hidden'
+    liProducts1.innerText = `${products[3].name}`
     liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[3].description}`
-      func()
-      })
+    func()
+  })
   liProducts2.innerText = `${products[4].name}`
-    liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[4].description}`
-      func()
-      })
-  liProducts3.innerText = `${products[9].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[7].description}` 
-      func()
-      })
-  func1();
+  liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[4].description}`
+  func()
+})
+liProducts3.innerText = `${products[9].name}`
+liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[7].description}` 
+func()
+})
+func1();
 }
 const fourthCategoriHandler = (ev) => {
+  visible(liProducts3)
+  visible(liProducts4)
+  message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[6].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[6].description}` 
-      func()
-      })
+  liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[6].description}` 
+  func()
+})
   liProducts2.innerText = `${products[8].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[8].description}` 
-      func()
-      })
+  liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[8].description}` 
+  func()
+})
   liProducts3.innerText = `${products[11].name}`
     liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[1].description}` 
       func()
@@ -162,19 +176,22 @@ const fourthCategoriHandler = (ev) => {
   func1();
 }
 const fivethCategoriHandler = (ev) => {
+  visible(liProducts3)
+  visible(liProducts4)
+  message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[1].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[1].description}` 
-      func()
-      })
-  liProducts2.innerText = `${products[13].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[13].description}` 
-      func()
-      })
-  liProducts3.innerText = `${products[14].name}`
-    liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[14].description}` 
-      func()
-      })
-  func1();
+  liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[1].description}` 
+  func()
+})
+liProducts2.innerText = `${products[13].name}`
+liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[13].description}` 
+func()
+})
+liProducts3.innerText = `${products[14].name}`
+liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[14].description}` 
+func()
+})
+func1();
 }
 
 categories[0].addEventListener("click", firstCategoriHandler);
@@ -182,3 +199,14 @@ categories[1].addEventListener("click", secondCategoriHandler);
 categories[2].addEventListener("click", thirdCategoriHandler);
 categories[3].addEventListener("click", fourthCategoriHandler);
 categories[4].addEventListener("click", fivethCategoriHandler)
+
+button.addEventListener('click', () => {
+  liProducts1.style.visibility = 'hidden'
+  liProducts2.style.visibility = 'hidden'
+  liProducts3.style.visibility = 'hidden'
+  liProducts4.style.visibility = 'hidden'
+  liProducts5.style.visibility = 'hidden'
+  button.style.visibility = 'hidden'
+  ulDescription.style.visibility = 'hidden'
+  message.style.visibility = 'visible'
+})
