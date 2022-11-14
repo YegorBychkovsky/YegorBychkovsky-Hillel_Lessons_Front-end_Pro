@@ -101,8 +101,7 @@ const visible = function () {
 }
 
 const firstCategoriHandler = (ev) => {
-  visible(liProducts3)
-  visible(liProducts4)
+  visible()
   message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[7].name}`
   liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[7].description}`
@@ -117,8 +116,7 @@ func1();
 }
 
 const secondCategoriHandler = (a) => {
-  visible(liProducts3)
-  visible(liProducts4)
+  visible()
   message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[0].name}`
   liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[0].description}`
@@ -140,8 +138,7 @@ liProducts3.innerText = `${products[5].name}`
     ulProducts.style.visibility = 'visible';
   }
   const thirdCategoriHandler = (ev) => {
-    visible(liProducts3)
-    visible(liProducts4)
+    visible()
     message.style.visibility = 'hidden'
     liProducts1.innerText = `${products[3].name}`
     liProducts1.addEventListener('click', () => {ulDescription.innerText = `${products[3].description}`
@@ -158,8 +155,7 @@ func()
 func1();
 }
 const fourthCategoriHandler = (ev) => {
-  visible(liProducts3)
-  visible(liProducts4)
+  visible()
   message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[6].name}`
   liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[6].description}` 
@@ -176,8 +172,7 @@ const fourthCategoriHandler = (ev) => {
   func1();
 }
 const fivethCategoriHandler = (ev) => {
-  visible(liProducts3)
-  visible(liProducts4)
+  visible()
   message.style.visibility = 'hidden'
   liProducts1.innerText = `${products[1].name}`
   liProducts1.addEventListener('click', () => { ulDescription.innerText = `${products[1].description}` 
