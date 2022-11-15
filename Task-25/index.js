@@ -1,3 +1,9 @@
 document.addEventListener('click', (event) => {
-    event.target.value++
-})
+    if (event.target.tagName === 'LABEL') {
+        const block = event.target.closest('.block')
+        const input = block.querySelector('input')
+        input.value++
+    } else {
+        return
+    }
+}) 
