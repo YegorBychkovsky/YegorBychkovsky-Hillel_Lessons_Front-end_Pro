@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        margin-bottom: 2%;
+    }
+</style>
+<body>
+    <form action="" method="get" target="_blank">
+        <div>
+            <label for="name">Имя</label>
+            <br>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="surname">Фамилия</label>
+            <br>
+            <input type="text" name="surname">
+        </div>
+        <div>
+            <label for="date">Дата рождения</label>
+            <br>
+            <input type="text" name="date">
+        </div>
+        <div>
+            <input type="radio" name="sex" value="male">
+            <label for="sex">Мужчина</label>
+            <input type="radio" name="sex" value="female">
+            <label for="sex">Женщина</label>
+        </div>
+        <div>
+            <select name="select" id="select">
+                <option value="value0" selected>Выберите город</option>
+                <option value="Одесса">Одесса</option>
+                <option value="Киев">Киев</option>
+                <option value="Харьков">Харьков</option>
+                <option value="Днепр">Днепр</option>
+                <option value="Николаев">Николаев</option>
+              </select>
+        </div>
+        <div>
+            <label for="textarea"> Ваш адресс</label>
+            <br>
+            <textarea name="textarea" id="textarea" cols="30" rows="1"></textarea>
+        </div>
+        <div>
+            <label for="language"> Какими языками владеете ?</label>
+            <br>
+            <input type="checkbox" name="language" id="Ukrainian" value="Украинский">
+            <label for="Ukrainian"> Украинский</label>
+            <br>
+            <input type="checkbox" name="language" id="Russian" value="Русский">
+            <label for="Russian"> Русский</label>
+            <br>
+            <input type="checkbox" name="language" id="English" value="Английский">
+            <label for="English"> Английский</label>
+            <br>
+            <input type="checkbox" name="language" id="Polish" value="Польский">
+            <label for="Polish"> Польский</label>
+            <br>
+            <input type="checkbox" name="language" id="French" value="Французский">
+            <label for="French"> Французский</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
