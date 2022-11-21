@@ -99,9 +99,16 @@ const categories = [
   const now = new Date()
   
   const func = function visibling(product) {
+    ulProducts.style.visibility = 'visible'
+    ulProducts.style.display = 'block'
     ulDescription.style.visibility = 'visible'
     orderDescriotion.style.display = 'none'
     itemInfo.style.display = 'block'
+    itemInfo.style.visibility = 'visible'
+
+    ulDescription.style.display = 'block'
+    button.style.display = 'block'
+    message.style.display = 'block'
     button.style.visibility = 'visible'
     form1(product)
     button.addEventListener('click', () => {
@@ -134,6 +141,9 @@ const categories = [
     for(i = 1; i < 6; i++) {
       const li =  document.querySelector(`[data-product-id = "${i}"]`);
       li.style.visibility = 'visible';
+      ulProducts.style.visibility = 'visible';
+      ulProducts.style.display = 'block';
+      
     }
   }
   const hidden = function () {
@@ -250,6 +260,7 @@ const categories = [
 const buttonOrdersHandler = (ev) => {
     hidden()
     ulProducts.style. visibility = 'hidden'
+    ulProducts.style. display = 'none'
     itemInfo.style.display = 'none';
     ulCategories.style.display = 'none';
     button.style.display = 'none';
