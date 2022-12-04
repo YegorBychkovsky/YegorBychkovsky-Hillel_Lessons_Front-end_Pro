@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +13,14 @@
             place-items: center;
             height: 50vh;
         }
-        
+
         .container {
             display: grid;
             grid-template-columns: 450px 450px 450px;
             place-items: center;
             gap: 1rem;
         }
-        
+
         #products, 
         #description,
         #buy-button,
@@ -30,20 +31,20 @@
         form{
             display: none;
         }
-        
+
         ul {
             list-style-type: none;
         }
-        
+
         li {
             padding: 0.5rem;
             cursor: pointer;
         }
-        
+
         li:active {
             color: blue;
         }
-        
+
         button {
             padding: 0.5rem 2rem;
             margin: 1rem 0;
@@ -127,12 +128,12 @@
                         <p>
                             Укажите отделение Новой Почты в которое будет доставлен товар
                         </p>
-                        <input class="numberOfNP" name="NovaPoshta" type="number">
+                        <input class="numberOfNP" name="NovaPoshta" type="number" min="1">
                         <label for="NovaPoshta">№</label>
                     </div>
                     <div>
                         <p>
-                            <input class="numberOfItems" name="numberOfItems" type="number">
+                            <input class="numberOfItems" name="numberOfItems" type="number" min="1">
                             Укажите кол-во выбраного вами товара
                         </p>
                     </div>
@@ -150,7 +151,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="./index.js"></script>
 </body>
 

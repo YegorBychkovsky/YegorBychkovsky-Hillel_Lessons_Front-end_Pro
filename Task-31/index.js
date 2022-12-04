@@ -77,11 +77,9 @@ const nothing = document.querySelector('.nothing')
 const orderDescriotion = document.querySelector('.order-descriotion')
 const buyBtn = document.querySelector('#buy-button')
 var value = 0
-categories[0] = document.querySelector('[data-category-id = "1"]')
-categories[1] = document.querySelector('[data-category-id = "2"]')
-categories[2] = document.querySelector('[data-category-id = "3"]')
-categories[3] = document.querySelector('[data-category-id = "4"]')
-categories[4] = document.querySelector('[data-category-id = "5"]')
+for(i = 0; i < categories.length; i++) {
+  categories[i] = document.querySelector(`[data-category-id = "${i+1}" ]`)
+}
 var liProducts1 = document.querySelector('[data-product-id = "1"]')
 var liProducts2 = document.querySelector('[data-product-id = "2"]')
 var liProducts3 = document.querySelector('[data-product-id = "3"]')
@@ -105,7 +103,7 @@ const func = function visibling(product) {
 
   form1(product)
   buyBtn.addEventListener('click', () => {
-    for(i = 1; i < 6; i++) {
+    for(i = 1; i < categories.length; i++) {
       const li =  document.querySelector(`[data-product-id = "${i}"]`);
       li.style.visibility = 'hidden';
     }
@@ -118,7 +116,6 @@ const func = function visibling(product) {
 }
 const funcHidding = function hidding(params) {
   ulDescription.style.visibility = 'hidden'
-  // button.style.visibility = 'hidden'
 }
 const func1 = function (params) {
   liProducts4.style.visibility = 'hidden'
@@ -127,26 +124,23 @@ const func1 = function (params) {
 }
 const visible = function () {
   itemInfoNone()
-  for(i = 1; i < 6; i++) {
+  for(i = 1; i < categories.length; i++) {
     const li =  document.querySelector(`[data-product-id = "${i}"]`);
     li.style.visibility = 'visible';
     ulProducts.style.visibility = 'visible';
     ulProducts.style.display = 'block';
-    
   }
 }
 const hidden = function () {
-  for(i = 1; i < 6; i++) {
+  for(i = 1; i < categories.length; i++) {
     const li =  document.querySelector(`[data-category-id = "${i}"]`);
     li.style.visibility = 'hidden';
   }
 }
 const visibleCategory = function () {
-  for(i = 1; i < 6; i++) {
-      
+  for(i = 1; i < categories.length + 1; i++) {
       const li =  document.querySelector(`[data-category-id = "${i}"]`);
       const ul =  document.querySelector('#categories');
-
       ul.style.visibility = 'visible';
       ul.style.display = 'block';
       li.style.visibility = 'visible';
