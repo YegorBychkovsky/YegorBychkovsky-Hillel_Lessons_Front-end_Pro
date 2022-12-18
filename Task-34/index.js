@@ -66,6 +66,7 @@ function getWeather(city) {
                 }
                 return resolve(json)
             })
+            
             .catch((err) => {
                 reject(err);
             })
