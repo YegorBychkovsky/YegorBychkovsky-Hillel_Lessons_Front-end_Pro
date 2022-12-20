@@ -9,21 +9,21 @@ const indicators = ['temp', 'pressure', 'description', 'humidity', 'speed', 'deg
 function getWeather(city) {
     title.innerHTML = city + ' weather'
     tempDiv.innerHTML = ''
-    for (let i = 0; i < 8; i++) {
-        const newDiv = document.createElement(`div`)
-        newDiv.classList.add (`.${indicators[i]}`)
-        tempDiv.appendChild(newDiv)
-        const promise = new Promise((resolve, reject) => {
-            const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=5d066958a60d315387d9492393935c19`
+    return new Promise((resolve, reject) => {
+        const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=5d066958a60d315387d9492393935c19`
+        for (let i = 0; i < 8; i++) {
+            const newDiv = document.createElement(`div`)
+            newDiv.classList.add (`.${indicators[i]}`)
+            tempDiv.appendChild(newDiv)
             fetch(URL)
             .then((response) => {
                 if (response.status === 404) {
-                    reject("404, Post not found")
+                    title.innerText = "Error"
+                    reject("404, Invalid name of city")
                 }
                 return response.json()
             })
             .then((json) => {
-                console.log(json);
                 if (i === 0) {
                     newDiv.innerText = `${indicators[i]} : ` + json.main.temp;
                 }
@@ -49,14 +49,19 @@ function getWeather(city) {
                 }
                 return resolve(json)
             })
-
             .catch((err) => {
                 reject(err);
             })
-        })
-        
-    }
+        }
+    })
 }
 submit.addEventListener('click', () => {
     getWeather(`${input.value}`)
+    .catch((err) => {
+        const div = document.createElement('div')
+        todayP.appendChild(div)
+        const post = ("Error: " + err)
+        div.innerText = post
+        console.warn(post);
+    })
 })
