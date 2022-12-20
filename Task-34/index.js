@@ -18,7 +18,7 @@ function getWeather(city) {
             fetch(URL)
             .then((response) => {
                 if (response.status === 404) {
-                    title.innerText = "Error"
+                    title.innerText = "Error";
                     reject("404, Invalid name of city")
                 }
                 return response.json()
@@ -57,6 +57,9 @@ function getWeather(city) {
 }
 submit.addEventListener('click', () => {
     getWeather(`${input.value}`)
+    .then((a) =>{
+        console.log(a);
+    })
     .catch((err) => {
         const div = document.createElement('div')
         todayP.appendChild(div)
