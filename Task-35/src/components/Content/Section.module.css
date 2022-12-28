@@ -1,0 +1,6 @@
+section {
+    width: 72vw;
+    height: 500px;
+    display: inline-block;
+    border: 2px solid rgb(33, 0, 180);
+}
