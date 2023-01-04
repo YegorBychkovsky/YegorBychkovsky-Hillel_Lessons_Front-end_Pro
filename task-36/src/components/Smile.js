@@ -6,18 +6,13 @@ class Smile extends React.Component {
         this.state={
             vol: props.initialValue
         }
-        // this.plus = this.plus.bind(this)
     }
-
-    // plus(){
-    //     this.setState({vol:  this.state.vol += 1})
-    // }
 
     render() {
         return (
             <div className="block">
                 <span role="button" onClick={()=> {
-                            this.setState({vol:  this.state.vol += 1})
+                    this.setState({vol:  this.state.vol += 1})
                 }}>{this.props.name}</span>
                 <input id="first" readOnly="readonly" value={this.state.vol} />
             </div>
