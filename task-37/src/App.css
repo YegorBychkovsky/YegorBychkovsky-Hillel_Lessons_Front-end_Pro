@@ -1,0 +1,56 @@
+.container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(54, 6, 175);
+}
+
+h1 {
+  color: white;
+}
+
+.input {
+  padding: 10px;
+  display: flex;
+  background-color: rgb(22, 166, 41);
+}
+
+
+
+.button {
+  margin-left: 10px;
+  padding: 0 auto;
+  width: 60px;
+}
+
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  /* height: 300px; */
+  width: 80%;
+  background-color: rgb(22, 166, 41);
+}
+
+.block {
+  background-color: antiquewhite;
+  display: flex;
+  margin: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.taskButton {
+  margin-top: 12px;
+  margin-left: 7px;
+  height: 20px;
+}
+
+.label {
+  margin: 10px;
+}
