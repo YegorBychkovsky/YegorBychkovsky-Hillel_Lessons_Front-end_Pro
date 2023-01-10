@@ -1,5 +1,5 @@
 import './App.css';
-import {ToDoBlocks} from "./components/ToDoBlocks";
+import {ToDoBlock} from "./components/ToDoBlock";
 import {InputPlus} from "./components/InputPlus";
 import { useState } from 'react';
 
@@ -11,17 +11,16 @@ function App() {
   const [ tasks, setTask] = useState([]);
 console.log(tasks);
 
+
 function compFunc(a, b) {
-  if ( a.statusbar === "active" &&  b.statusbar !== "active"  ) {
+  if ( a.statusActive = false &&  b.statusActive != true  ) {
       return -1;
-  } else if ( a.statusbar !== "active" && b.statusbar !== "active"  ) {
+  } else if ( a.statusActive != false && b.statusActive != true  ) {
       return 1;
   } else {
       return 0;
   }
 }
-
-tasks.sort(compFunc)
 
 return (
   <main className='container'>
@@ -35,7 +34,7 @@ return (
               {
                 id: generateId(),
                 title,
-                statusbar: "passive"
+                statusActive: false
               },
               ...tasks
           ])
@@ -44,13 +43,22 @@ return (
       </div>
       <div className='titleSection'>
       {tasks.map((task) => (
-          <ToDoBlocks
+          <ToDoBlock
+            tasks={tasks}
             key={task.id}
             title={task.title}
-            statusbar={task.statusbar}
+            statusActive={task.statusActive}
             addStatusFunc = {(newStatus)=>{
-              task.statusbar = newStatus
-              console.log(newStatus);
+                task.statusActive = !newStatus
+            }}
+            compFunc = {(a, b) => {
+              if ( a.statusActive < b.statusActive ) {
+                return -1;
+              } else if (a.statusActive > b.statusActive) {
+                  return 1;
+              } else {
+                  return 0;
+              }
             }}
           />
         ))}
@@ -61,6 +69,3 @@ return (
 
 
 export default App;
-// addStatus = {(newStatus)=>{
-//   setTask(task.statusbar = newStatus)
-// }}
