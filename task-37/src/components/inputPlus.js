@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 
 export const InputPlus = ({
@@ -6,7 +6,7 @@ export const InputPlus = ({
 }) => {
     const [inputValue, setInputValue] = useState("")
     return (
-        <div className={'qw'}>
+        <div>
             <input 
                 className='newItem'
                 value={inputValue}
