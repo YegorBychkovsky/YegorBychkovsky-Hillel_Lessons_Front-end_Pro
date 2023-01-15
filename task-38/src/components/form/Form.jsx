@@ -3,26 +3,9 @@ import "./Form.css";
 export const FormContact = ({
     onAdd,
 }) => {
-    const [contact, setContact] = useState([]);
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [phone, setPhone] = useState('');
-    // function HandleSubmitForm(params) {
-    //     useEffect(() => {
-    //         setContact([
-    //             {
-    //                 id: generateId(),
-    //                 name: name,
-    //                 surname: surname,
-    //                 phone: phone
-    //             }
-    //         ])
-    //     }, [])
-    //     console.log(contact);
-    // }
-    const generateId = () => (
-        Math.random().toString(16).slice(2) + new Date().getTime().toString(36)
-    );
     return (
 
         <><input
@@ -52,7 +35,6 @@ export const FormContact = ({
                     onAdd(
                         name, surname, phone
                     );
-                    // HandleSubmitForm()
                 }}
             >
                 Submit
