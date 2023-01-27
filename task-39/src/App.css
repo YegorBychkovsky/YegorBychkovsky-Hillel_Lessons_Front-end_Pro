@@ -1,0 +1,23 @@
+.wrapper {
+  box-sizing: border-box;
+}
+.header {
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.top {
+  box-sizing: border-box;
+
+  padding: 30px 130px;
+  max-width: 150px;
+  background-color: beige;
+}
+.userInfo {
+    box-sizing: border-box;
+
+  padding: 30px 130px;
+  max-width: 150px;
+
+  background-color:azure;
+}
