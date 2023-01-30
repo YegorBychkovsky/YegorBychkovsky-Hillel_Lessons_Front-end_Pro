@@ -26,13 +26,6 @@ function App() {
 									? dispatch(changeState({ id: task.id, status: newStatus }))
 									: item
 							);
-							// dispatch(
-							// 	changeState(
-							// 		tasks.map((item) =>
-							// 			item.id === task.id ? { ...task, statusActive: !newStatus } : item
-							// 		)
-							// 	)
-							// );
 						}}
 					/>
 				))}
