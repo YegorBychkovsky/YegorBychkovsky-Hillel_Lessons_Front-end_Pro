@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { sortTasks } from "../redux/slices/addTodoFormSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement } from "../redux/todos/todoSlice";
 
 export const ToDoBlock = ({ title, addStatusFunc }) => {
+	const count = useSelector((state) => state.counter.value);
 	const dispatch = useDispatch();
 
 	let [selected, setSelected] = useState(false);
@@ -10,7 +11,7 @@ export const ToDoBlock = ({ title, addStatusFunc }) => {
 	const handleChange = () => {
 		addStatusFunc(selected);
 		setSelected((value) => !value);
-		dispatch(sortTasks());
+		dispatch(decrement());
 	};
 	return (
 		<div className={"block"}>

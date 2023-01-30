@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/addTodoFormSlice";
+import counterReducer from "./todos/todoSlice";
 
 export const store = configureStore({
 	reducer: {

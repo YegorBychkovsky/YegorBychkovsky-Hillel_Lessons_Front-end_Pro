@@ -1,33 +1,38 @@
 import "./App.css";
 import { ToDoBlock } from "./components/ToDoBlock";
-import { InputPlus } from "./components/inputPlus";
+import { AddTodoForm } from "./components/AddTodoForm";
 
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "./redux/todos/todoSlice";
+import { changeState } from "./redux/slices/addTodoFormSlice";
 
 function App() {
-	const count = useSelector((state) => state.counter.value);
+	const tasks = useSelector((state) => state.counter.tasks);
 	const dispatch = useDispatch();
 
 	return (
 		<main className="container">
 			<h1>To do List</h1>
 			<div className="input">
-				<InputPlus />
+				<AddTodoForm />
 			</div>
 			<div className="titleSection">
-				{count.map((task) => (
+				{tasks.map((task) => (
 					<ToDoBlock
 						key={task.id}
 						title={task.title}
 						addStatusFunc={(newStatus) => {
-							dispatch(
-								increment(
-									count.map((item) =>
-										item.id === task.id ? { ...task, statusActive: !newStatus } : item
-									)
-								)
+							tasks.map((item) =>
+								item.id === task.id
+									? dispatch(changeState({ id: task.id, status: newStatus }))
+									: item
 							);
+							// dispatch(
+							// 	changeState(
+							// 		tasks.map((item) =>
+							// 			item.id === task.id ? { ...task, statusActive: !newStatus } : item
+							// 		)
+							// 	)
+							// );
 						}}
 					/>
 				))}
