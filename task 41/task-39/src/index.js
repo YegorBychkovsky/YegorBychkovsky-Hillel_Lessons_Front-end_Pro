@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Users } from './pages/Users';
 import { Albums } from './pages/Albums';
